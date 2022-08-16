@@ -1,0 +1,5 @@
+node_modules
+prod
+nodemon.json
+.env
+ecosystem.config.js
