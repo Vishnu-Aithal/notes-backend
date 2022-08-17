@@ -45,6 +45,8 @@ const editNoteFromNotes: Handler = async (req, res, next) => {
             user.notes[noteIndex].tags = note.tags;
             user.notes[noteIndex].priority = note.priority;
             user.notes[noteIndex].color = note.color;
+            user.notes[noteIndex].pinned =
+                note.pinned ?? user.notes[noteIndex].pinned;
         } catch (error) {
             throw errorMessageWithCode("bad request body", 400);
         }
