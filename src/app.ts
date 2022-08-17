@@ -8,6 +8,7 @@ import { notesRouter } from "./Routes/Private/notes";
 import { authRouter } from "./Routes/Public/auth";
 import { archivesRouter } from "./Routes/Private/archives";
 import { trashRouter } from "./Routes/Private/trash";
+import { todosRouter } from "./Routes/Private/todos";
 
 const JSONParser = express.json();
 const app = express();
@@ -20,6 +21,7 @@ app.use(authRouter);
 app.use(notesRouter);
 app.use(archivesRouter);
 app.use(trashRouter);
+app.use(todosRouter);
 
 app.use(errorHandling);
 

@@ -4,7 +4,7 @@ import { Todo } from "../../Models/Todo";
 import { UserModelType } from "../../Models/User";
 import { errorMessageWithCode } from "../../Utils/errorMessageWithCode";
 
-const todosRouter = Router();
+export const todosRouter = Router();
 
 const getAllTodos: Handler = async (req, res, next) => {
     try {
