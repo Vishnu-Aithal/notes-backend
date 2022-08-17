@@ -54,6 +54,7 @@ const deleteNoteFromTrash: Handler = async (req, res, next) => {
         );
         user.trash.splice(noteIndex, 1);
         await user.save();
+        res.json({ trash: user.trash });
     } catch (error) {
         next(error);
     }

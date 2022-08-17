@@ -56,6 +56,7 @@ const deleteNoteFromArchives: Handler = async (req, res, next) => {
         );
         user.archives.splice(noteIndex, 1);
         await user.save();
+        res.json({ archives: user.archives });
     } catch (error) {
         next(error);
     }
